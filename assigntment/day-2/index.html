@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Data Binding</title>
+    <script src="https://code.angularjs.org/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <div ng-controller="MyController">
+        <h1>Welcome to My AngularJS App</h1>
+        <p>{{ greeting }}</p>
+        <ul>
+            <li ng-repeat="item in items">{{ item }}</li>
+        </ul>
+    </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+
+        app.controller('MyController', function ($scope) {
+            // Bind data to the scope
+            $scope.greeting = 'Hello, AngularJS!';
+            $scope.items = ['Apple', 'Banana', 'Cherry', 'Date'];
+        });
+    </script>
+</body>
+</html>
