@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Custom Directives</title>
+    <!-- Include AngularJS library -->
+    <script src="https://code.angularjs.org/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <div ng-controller="MyController">
+        <h1>Item List</h1>
+        <ul>
+            <li ng-repeat="item in items" highlight uppercase>{{ item }}</li>
+        </ul>
+    </div>
+
+    <!-- Define custom directives -->
+    <script>
+        var app = angular.module('myApp', []);
+
+        // Custom directive: 'highlight'
+        app.directive('highlight', function () {
+            return {
+                restrict: 'A',
+                link: function (scope, element) {
+                    element.on('mouseenter', function () {
+                        element.css('background-color', 'yellow');
+                    });
+                    element.on('mouseleave', function () {
+                        element.css('background-color', '');
+                    });
+                }
+            };
+        });
+
+        // Custom directive: 'uppercase'
+        app.directive('uppercase', function () {
+            return {
+                restrict: 'A',
+                link: function (scope, element) {
+                    scope.$watch('item', function (newValue) {
+                        element.text(newValue.toUpperCase());
+                    });
+                }
+            };
+        });
+
+        // Controller to provide sample data
+        app.controller('MyController', function ($scope) {
+            $scope.items = ['apple', 'banana', 'cherry', 'date'];
+        });
+    </script>
+</body>
+</html>
