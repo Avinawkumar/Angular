@@ -1,8 +1,23 @@
 <h1>welcome to  myangular app</h1>
-
+<app-second-class></app-second-class>
 
 <h1>{{PageTitle}} </h1>
 <h2>Sum of a and b : {{a + b}} </h2>
 <h3>sum + 10 : {{a+b+10}} </h3>
 
-<app-second-class></app-second-class>
+
+<img [src]="imageUrl" alt="Image">
+
+<button (click)="toggleChange()"  [disabled] = "disable"> Submit</button>
+
+<button (click)="handleButtonClick()">Click Me</button>
+
+
+<input type="text" [(ngModel)]="userName" placeholder="Enter userName">
+<p> Your userName: {{userName}} </p>
+
+
+
+<div [style.color]="isError ? 'red' : 'green' " >
+  This text will be red if isError is true, and green if isError is false
+</div>
