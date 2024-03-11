@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ToggleHighlightDirective } from './toggle-highlight.directive';
 import { ConditionalDisplayDirective } from './conditional-display.directive';
+import { ProductsComponentComponent } from './products-component/products-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToggleHighlightDirective,
-    ConditionalDisplayDirective
+    ConditionalDisplayDirective,
+    ProductsComponentComponent
   ],
   imports: [
     BrowserModule,

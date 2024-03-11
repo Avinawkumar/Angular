@@ -9,4 +9,7 @@ export class AppComponent {
   title = 'directive';
 
   showParagraph = false;
+
+
+  
 }
