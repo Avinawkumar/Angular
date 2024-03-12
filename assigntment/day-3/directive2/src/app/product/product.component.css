@@ -1,0 +1,13 @@
+
+
+.available {
+    background-color: green;
+  }
+  
+  .unavailable {
+    background-color: red;
+  }
+  
+  .high-price {
+    font-size: 18px;
+  }

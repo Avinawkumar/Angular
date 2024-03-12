@@ -1,0 +1,13 @@
+<p>product works!</p>
+
+
+<input type="number" [(ngModel)]="priceThreshold" placeholder="Enter price threshold">
+
+
+<div *ngFor="let product of products" [ngClass]="{
+    'available': product.available,
+    'unavailable': !product.available,
+    'high-price': product.price > 50
+  }">
+    <span [style.font-size.px]="product.price > 50 ? 18 : 14">{{ product.name }}</span>
+  </div>
