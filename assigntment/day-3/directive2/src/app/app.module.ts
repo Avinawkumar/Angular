@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { TodoListComponent } from './todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
+    TodoListComponent,
      
   ],
   imports: [

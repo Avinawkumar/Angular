@@ -23,10 +23,10 @@ export class ProductComponent {
     { name: 'Gaming Console', price: 400, available: false },
     { name: 'Smartwatch', price: 150, available: true },
     { name: 'External Hard Drive', price: 120, available: true }
-    // Add more products...
+    
   ];
 
-  priceThreshold: number = 50; // Initialize with default threshold
+  priceThreshold: number = 50; 
 
   
 
